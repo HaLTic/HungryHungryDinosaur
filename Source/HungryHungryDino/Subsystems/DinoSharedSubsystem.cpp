@@ -36,7 +36,7 @@ void UDinoSharedSubsystem::OnWorldBeginPlay(UWorld& InWorld)
 	}
 	SpawnerSubsystem = InWorld.GetSubsystem<UMassSpawnerSubsystem>();
 
-	StartSpawnManager();
+	//StartSpawnManager();
 }
 
 void UDinoSharedSubsystem::StartSpawnManager()
