@@ -18,10 +18,26 @@ public class HungryHungryDino : ModuleRules
 			"StateTreeModule",
 			"GameplayStateTreeModule",
 			"UMG",
-			"Slate"
+			"Slate",
+			"MassEntity",
+			"MassMovement",
+			"MassRepresentation",
+			"MassCommon",
+			"MassSpawner",
+			"MassActors",
+			"MassAIBehavior",
+			"StateTreeModule",
+			"DeveloperSettings",
+			"MassNavigation"
 		});
-
-		PrivateDependencyModuleNames.AddRange(new string[] { });
+		
+		PrivateDependencyModuleNames.AddRange(new string[]
+		{
+			"AIModule",
+			"NavigationSystem",
+			"ZoneGraph",
+			"MassGameplayDebug"
+		});
 
 		PublicIncludePaths.AddRange(new string[] {
 			"HungryHungryDino",
