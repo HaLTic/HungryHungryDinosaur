@@ -14,6 +14,7 @@ struct FSimpleMovementFragment : public FMassFragment
 	FVector Target;
 	
 };
+
 UCLASS()
 class HUNGRYHUNGRYDINO_API USimpleRandomMovementTrait : public UMassEntityTraitBase
 {

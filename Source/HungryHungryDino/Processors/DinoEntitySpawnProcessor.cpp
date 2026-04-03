@@ -28,7 +28,6 @@ void UDinoEntitySpawnProcessor::ConfigureQueries(const TSharedRef<FMassEntityMan
 
 void UDinoEntitySpawnProcessor::Execute(FMassEntityManager& EntityManager, FMassExecutionContext& Context)
 {
-
 	EntityQuery.ForEachEntityChunk(Context, [this](FMassExecutionContext& SubContext)
 	{
 		const TArrayView<FDinoEntityFragment> EntityFragments = SubContext.GetMutableFragmentView<FDinoEntityFragment>();
