@@ -47,6 +47,10 @@
 		{
 			"Name": "ZoneGraph",
 			"Enabled": true
+		},
+		{
+			"Name": "AnimToTexture",
+			"Enabled": true
 		}
 	]
 }
