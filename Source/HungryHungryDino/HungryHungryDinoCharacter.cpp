@@ -11,8 +11,6 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "HungryHungryDino.h"
-#include "GrowthComponent.h"
-#include "EatingComponent.h"
 #include "Curves/CurveFloat.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
@@ -96,19 +94,8 @@ void AHungryHungryDinoCharacter::SetScale(float NewScale)
 	CurrentScale = NewScale;
 }
 
-void AHungryHungryDinoCharacter::DebugGrow()
-{
-	if (UGrowthComponent* GC = FindComponentByClass<UGrowthComponent>())
-	{
-		GC->AddGrowth(1.0f);
-	}
-}
-
 void AHungryHungryDinoCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
-	// debug: press G to grow (remove after testing)
-	PlayerInputComponent->BindKey(EKeys::G, IE_Pressed, this, &AHungryHungryDinoCharacter::DebugGrow);
-
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent))
 	{
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);

@@ -3,12 +3,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GrowthComponent.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
 #include "HungryHungryDinoCharacter.generated.h"
 
-class UEatingComponent;
 class UCurveFloat;
 class USpringArmComponent;
 class UCameraComponent;
@@ -85,9 +83,6 @@ public:
 	// sole entry point for changing scale — updates actor, capsule, camera, speed
 	UFUNCTION(BlueprintCallable, Category="Scaling")
 	virtual void SetScale(float NewScale);
-
-	// debug: press G to grow (remove after testing)
-	void DebugGrow();
 
 	UFUNCTION(BlueprintCallable, Category="Input")
 	virtual void DoMove(float Right, float Forward);
