@@ -39,7 +39,13 @@ protected:
 
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputAction* MouseLookAction;
+	
+	UPROPERTY(EditAnywhere, Category="Input")
+	UInputAction* SpinAttackAction;
 
+	UPROPERTY(EditAnywhere, Category="Input")
+	UInputAction* BiteAttackAction;
+	
 	// scaling baselines — captured at BeginPlay, used by SetScale()
 	UPROPERTY(BlueprintReadOnly, Category="Scaling", meta=(AllowPrivateAccess="true"))
 	float BaseArmLength = 0.0f;
